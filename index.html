@@ -5,21 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11091388910"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-11091388910');
-    </script>
-
-    <!-- Meta Pixel Code -->
-    <script>!function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '4157064904560995'); fbq('track', 'PageView');</script>
-    <noscript><img height="1" width="1"
-            src="https://www.facebook.com/tr?id=4157064904560995&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel Code -->
-
     <title>Mighty Dog Roofing | Professional Roof Replacement Services</title>
     <meta name="description"
         content="Professional roof replacement services — full tear-off, new installation, and premium materials. Licensed, insured, and trusted by hundreds of homeowners. Free estimates.">
@@ -869,10 +854,6 @@
     </style>
     <!-- CallRail Form Capture -->
     <script src="https://cdn.callrail.com/companies/907380537/7f46951650c5449aff71/12/swap.js"></script>
-    <!-- Meta Pixel Code -->
-    <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','4157064904560995');fbq('track','PageView');</script>
-    <noscript><img height="1" width="1" src="https://www.facebook.com/tr?id=4157064904560995&ev=PageView&noscript=1"/></noscript>
-    <!-- End Meta Pixel Code -->
 </head>
 
 <body class="bg-brand-light font-euro">
@@ -1441,14 +1422,6 @@
                                         placeholder="How can we help?"></textarea>
                                 </div>
 
-                                <!-- UTM Hidden Fields -->
-                                <input type="hidden" id="utm_source" name="utm_source">
-                                <input type="hidden" id="utm_medium" name="utm_medium">
-                                <input type="hidden" id="utm_campaign" name="utm_campaign">
-                                <input type="hidden" id="utm_content" name="utm_content">
-                                <input type="hidden" id="utm_term" name="utm_term">
-                                <input type="hidden" id="utm_id" name="utm_id">
-
                                 <button type="submit" class="form-submit mt-2">
                                     <i class="fas fa-clipboard-check mr-2"></i> Get Free Estimate
                                 </button>
@@ -1615,19 +1588,6 @@
 
     <!-- ===== SCRIPTS ===== -->
     <script>
-            // ===== UTM CAPTURE =====
-            (function () {
-                var params = new URLSearchParams(window.location.search);
-                var utmFields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id'];
-                utmFields.forEach(function (field) {
-                    var value = params.get(field);
-                    if (value) {
-                        var el = document.getElementById(field);
-                        if (el) el.value = value;
-                    }
-                });
-            })();
-
         // ===== FORM VALIDATION & SUBMISSION =====
         function showError(input, message) {
             input.classList.add('input-error');
@@ -1754,17 +1714,7 @@
             acculynxData.append('City', formData.get('city'));
             acculynxData.append('Zip', formData.get('zip'));
 
-            // Append UTM data to Message
-            var message = formData.get('message') || '';
-            var utmParts = [];
-            ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id'].forEach(function (key) {
-                var val = formData.get(key);
-                if (val) utmParts.push(key + '=' + val);
-            });
-            if (utmParts.length) {
-                message += (message ? '\n\n' : '') + '--- UTM ---\n' + utmParts.join('\n');
-            }
-            acculynxData.append('Message', message);
+            acculynxData.append('Message', formData.get('message') || '');
 
             // Submit to AccuLynx
             fetch('https://leads.acculynx.com/api/leads/submit-new-lead?formID=baf9f419-1a06-46ed-96b8-30c69263a592', {
