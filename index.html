@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11091388910"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-11091388910');
+    </script>
+
     <title>Mighty Dog Roofing | Professional Roof Replacement Services</title>
     <meta name="description"
         content="Professional roof replacement services — full tear-off, new installation, and premium materials. Licensed, insured, and trusted by hundreds of homeowners. Free estimates.">
@@ -1422,6 +1431,12 @@
                                         placeholder="How can we help?"></textarea>
                                 </div>
 
+                                <!-- UTM Hidden Fields -->
+                                <input type="hidden" id="utm_source" name="utm_source">
+                                <input type="hidden" id="utm_medium" name="utm_medium">
+                                <input type="hidden" id="utm_campaign" name="utm_campaign">
+                                <input type="hidden" id="utm_term" name="utm_term">
+
                                 <button type="submit" class="form-submit mt-2">
                                     <i class="fas fa-clipboard-check mr-2"></i> Get Free Estimate
                                 </button>
@@ -1588,6 +1603,18 @@
 
     <!-- ===== SCRIPTS ===== -->
     <script>
+        // ===== UTM CAPTURE =====
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term'].forEach(function (field) {
+                var value = params.get(field);
+                if (value) {
+                    var el = document.getElementById(field);
+                    if (el) el.value = value;
+                }
+            });
+        })();
+
         // ===== FORM VALIDATION & SUBMISSION =====
         function showError(input, message) {
             input.classList.add('input-error');
@@ -1714,7 +1741,17 @@
             acculynxData.append('City', formData.get('city'));
             acculynxData.append('Zip', formData.get('zip'));
 
-            acculynxData.append('Message', formData.get('message') || '');
+            // Append UTM data to Message
+            var message = formData.get('message') || '';
+            var utmParts = [];
+            ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term'].forEach(function (key) {
+                var val = formData.get(key);
+                if (val) utmParts.push(key + '=' + val);
+            });
+            if (utmParts.length) {
+                message += (message ? '\n\n' : '') + '--- UTM ---\n' + utmParts.join('\n');
+            }
+            acculynxData.append('Message', message);
 
             // Submit to AccuLynx
             fetch('https://leads.acculynx.com/api/leads/submit-new-lead?formID=baf9f419-1a06-46ed-96b8-30c69263a592', {
