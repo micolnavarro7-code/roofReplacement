@@ -1,0 +1,1942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11091388910"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-11091388910');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>!function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '4157064904560995'); fbq('track', 'PageView');</script>
+    <noscript><img height="1" width="1"
+            src="https://www.facebook.com/tr?id=4157064904560995&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <title>Mighty Dog Roofing | Professional Roof Replacement Services</title>
+    <meta name="description"
+        content="Professional roof replacement services — full tear-off, new installation, and premium materials. Licensed, insured, and trusted by hundreds of homeowners. Free estimates.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS - Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts (Exo 2 as EuroStyle fallback) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Jura:wght@300..700&family=Michroma&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-red': '#D81921',
+                        'brand-blue': '#00B7EA',
+                        'brand-light': '#F8F6F6',
+                        'brand-dark': '#1a1a2e',
+                    },
+                    fontFamily: {
+                        'euro': ['"Eurostile"', '"Exo 2"', 'sans-serif'],
+                        'jura': ['"Jura"', 'sans-serif'],
+                        'michroma': ['"Michroma"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* ===== FONT FACE ===== */
+        @font-face {
+            font-family: 'Eurostile';
+            src: url('EuroStyle Normal.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Eurostile';
+            src: url('EurostileExtendedBlack.ttf') format('truetype');
+            font-weight: 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* ===== BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Eurostile', 'Exo 2', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* ===== PRELOADER ===== */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #1a1a2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+
+        #preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-logo {
+            animation: pulse-loader 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse-loader {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.7;
+            }
+        }
+
+        /* ===== HEADER ===== */
+        .header-scrolled {
+            background: rgba(26, 26, 46, 0.97) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.5rem !important;
+        }
+
+        .header-scrolled .header-logo {
+            max-height: 60px !important;
+        }
+
+        /* ===== HERO ===== */
+        .hero-section {
+            position: relative;
+            min-height: 100svh;
+            display: flex;
+            align-items: flex-start;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('ROOFREPAIR.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero-bg {
+                background-attachment: scroll;
+            }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.92) 0%, rgba(26, 26, 46, 0.75) 50%, rgba(216, 25, 33, 0.4) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-80px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(80px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes roofLine {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .animate-slide-left {
+            animation: slideInLeft 1s ease-out forwards;
+        }
+
+        .animate-slide-right {
+            animation: slideInRight 1s ease-out forwards;
+        }
+
+        .animate-fade-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .animate-scale-in {
+            animation: scaleIn 0.8s ease-out forwards;
+        }
+
+        .shimmer-text {
+            background: linear-gradient(90deg, #ffffff 0%, #00B7EA 25%, #ffffff 50%, #D81921 75%, #ffffff 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 4s linear infinite;
+        }
+
+        .gradient-animate {
+            background-size: 200% 200%;
+            animation: gradientShift 6s ease infinite;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn-primary {
+            background: linear-gradient(135deg, #D81921 0%, #b51419 100%);
+            color: white;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 20px rgba(216, 25, 33, 0.4);
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 8px 30px rgba(216, 25, 33, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid #00B7EA;
+            transition: all 0.4s ease;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-secondary:hover {
+            background: #00B7EA;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 183, 234, 0.4);
+        }
+
+        .btn-text-now {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-text-now:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        /* ===== BENEFIT CARDS ===== */
+        /* ===== JURA ACCENT FONT ===== */
+        span[class*="tracking-widest"][class*="uppercase"] {
+            font-family: 'Jura', sans-serif;
+            font-weight: 600;
+            font-optical-sizing: auto;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Michroma', sans-serif;
+        }
+
+        .benefit-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #D81921, #00B7EA);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+            transform-origin: left;
+        }
+
+        .benefit-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 1.2rem;
+            transition: all 0.4s ease;
+        }
+
+        .benefit-card:hover .benefit-icon {
+            transform: rotateY(180deg);
+        }
+
+        /* ===== PARALLAX SECTION ===== */
+        .parallax-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .parallax-bg {
+            position: absolute;
+            top: -20%;
+            left: 0;
+            width: 100%;
+            height: 140%;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        @media (max-width: 768px) {
+            .parallax-bg {
+                background-attachment: scroll;
+            }
+        }
+
+        /* ===== IMAGE CARDS ===== */
+        .image-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+        }
+
+        .image-card img {
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .image-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .image-card .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(26, 26, 46, 0.95), transparent);
+            padding: 2rem 1.5rem;
+            transform: translateY(60%);
+            transition: all 0.4s ease;
+        }
+
+        .image-card:hover .overlay {
+            transform: translateY(0);
+        }
+
+        /* ===== FORM SECTION ===== */
+        .form-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+
+        .form-header {
+            background: linear-gradient(135deg, #D81921 0%, #b51419 100%);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: #f9fafb;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #00B7EA;
+            box-shadow: 0 0 0 4px rgba(0, 183, 234, 0.15);
+            background: white;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+            color: #374151;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #D81921 0%, #b51419 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-family: inherit;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(216, 25, 33, 0.5);
+        }
+
+        .form-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* ===== SERVICE AREA TAGS ===== */
+        .city-tag {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .city-tag:hover {
+            border-color: #00B7EA;
+            background: #00B7EA;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 183, 234, 0.3);
+        }
+
+        /* ===== SCROLL INDICATOR ===== */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+        }
+
+        .scroll-indicator .mouse {
+            width: 26px;
+            height: 42px;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .scroll-indicator .wheel {
+            width: 4px;
+            height: 8px;
+            background: white;
+            border-radius: 2px;
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scrollWheel 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollWheel {
+            0% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(16px);
+            }
+        }
+
+        /* ===== BACK TO TOP ===== */
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #D81921, #00B7EA);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        #backToTop.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #backToTop:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #D81921, #00B7EA);
+            z-index: 10001;
+            transition: width 0.1s ease;
+        }
+
+        /* ===== COUNTER ===== */
+        .counter-box {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .counter-number {
+            font-family: 'Jura', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        /* ===== DIVIDER ===== */
+        .section-divider {
+            height: 4px;
+            background: linear-gradient(90deg, #D81921, #00B7EA, #D81921);
+            background-size: 200% 100%;
+            animation: gradientShift 4s ease infinite;
+        }
+
+        /* ===== FLOATING BADGE ===== */
+        .floating-badge {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            z-index: 999;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-badge a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #D81921, #b51419);
+            color: white;
+            padding: 14px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            box-shadow: 0 8px 30px rgba(216, 25, 33, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .floating-badge a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 40px rgba(216, 25, 33, 0.6);
+        }
+
+        /* ===== REVEAL ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ===== MOBILE NAV ===== */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* ===== SUCCESS MESSAGE (form) ===== */
+        .form-success {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .form-success.show {
+            display: flex;
+        }
+
+        .form-success .checkmark {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: white;
+            margin-bottom: 1.5rem;
+            animation: scaleIn 0.6s ease-out;
+        }
+
+        /* ===== CUSTOM SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1a1a2e;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #D81921, #00B7EA);
+            border-radius: 4px;
+        }
+
+        /* ===== PHONE RING ANIMATION ===== */
+        @keyframes ring {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            10% {
+                transform: rotate(15deg);
+            }
+
+            20% {
+                transform: rotate(-15deg);
+            }
+
+            30% {
+                transform: rotate(10deg);
+            }
+
+            40% {
+                transform: rotate(-10deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .phone-ring:hover i {
+            animation: ring 1s ease-in-out;
+        }
+
+        /* ===== FORM VALIDATION ===== */
+        .form-input.input-error {
+            border-color: #ef4444;
+            background: #fef2f2;
+        }
+
+        .form-input.input-error:focus {
+            border-color: #ef4444;
+            box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15);
+        }
+
+        .form-input.input-valid {
+            border-color: #10b981;
+        }
+    </style>
+    <!-- CallRail Form Capture -->
+    <script src="https://cdn.callrail.com/companies/907380537/7f46951650c5449aff71/12/swap.js"></script>
+    <!-- Meta Pixel Code -->
+    <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','4157064904560995');fbq('track','PageView');</script>
+    <noscript><img height="1" width="1" src="https://www.facebook.com/tr?id=4157064904560995&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body class="bg-brand-light font-euro">
+
+    <!-- ===== PRELOADER ===== -->
+    <div id="preloader">
+        <img src="mightydogroofing.png" alt="Loading..." class="loader-logo w-32">
+    </div>
+
+    <!-- ===== PROGRESS BAR ===== -->
+    <div id="progressBar"></div>
+
+    <!-- ===== HEADER ===== -->
+    <header id="header" class="fixed top-0 left-0 w-full z-[10000] transition-all duration-500 py-4 px-4 lg:px-8">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex-shrink-0">
+                <img src="mightydogroofing.png" alt="Mighty Dog Roofing"
+                    class="header-logo transition-all duration-500 max-h-[120px] lg:max-h-[150px]">
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-6">
+                <a href="tel:9786345611"
+                    class="phone-ring flex items-center gap-2 text-white font-bold text-lg hover:text-brand-blue transition-colors">
+                    <i class="fas fa-phone-alt text-brand-blue"></i>
+                    (978) 634-5611
+                </a>
+                <a href="#form-section" class="btn-primary text-sm !py-3 !px-6">
+                    Schedule FREE Estimate
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="mobileMenuBtn" class="md:hidden text-white text-2xl focus:outline-none z-[10002]">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="mobile-menu fixed top-0 right-0 w-72 h-full bg-brand-dark/98 backdrop-blur-lg flex flex-col items-center justify-center gap-8 z-[10001]">
+            <button id="mobileMenuClose" class="absolute top-6 right-6 text-white text-2xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <a href="tel:9786345611" class="flex items-center gap-3 text-white font-bold text-xl">
+                <i class="fas fa-phone-alt text-brand-blue text-2xl"></i>
+                (978) 634-5611
+            </a>
+            <a href="#benefits" class="text-white text-lg font-semibold hover:text-brand-blue transition-colors"
+                onclick="closeMobileMenu()">Why Us</a>
+            <a href="#services" class="text-white text-lg font-semibold hover:text-brand-blue transition-colors"
+                onclick="closeMobileMenu()">Services</a>
+            <a href="#form-section" class="text-white text-lg font-semibold hover:text-brand-blue transition-colors"
+                onclick="closeMobileMenu()">Contact</a>
+            <a href="#areas" class="text-white text-lg font-semibold hover:text-brand-blue transition-colors"
+                onclick="closeMobileMenu()">Areas</a>
+            <a href="#form-section" class="btn-primary mt-4" onclick="closeMobileMenu()">Schedule FREE Estimate</a>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content w-full px-4 lg:px-8 pt-28 sm:pt-32 pb-12">
+            <div class="max-w-7xl mx-auto">
+                <div class="max-w-3xl">
+                    <!-- Headline -->
+                    <h1
+                        class="text-3xl sm:text-5xl lg:text-7xl font-black text-white leading-tight mb-4 animate-slide-left">
+                        Expert <span class="shimmer-text">Roof Replacement</span> You Can Trust
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-xl lg:text-2xl text-gray-200 mb-6 sm:mb-8 animate-fade-up"
+                        style="animation-delay: 0.3s;">
+                        Aging roof, storm damage, or failing shingles? We replace it right. Licensed, insured, and backed by our
+                        installation warranty.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-up"
+                        style="animation-delay: 0.6s;">
+                        <a href="tel:9786345611" class="btn-primary text-center text-base sm:text-lg !py-3 sm:!py-4">
+                            <i class="fas fa-phone-alt mr-2"></i> Call Now
+                        </a>
+                        <a href="#form-section" class="btn-secondary text-center text-base sm:text-lg !py-3 sm:!py-4">
+                            <i class="fas fa-calendar-check mr-2"></i> Schedule FREE Estimate
+                        </a>
+                        <a href="sms:+19786345611&body=Hi%2C%20I%20need%20a%20roof%20replacement%20estimate"
+                            class="btn-text-now text-center text-base sm:text-lg !py-3 sm:!py-4">
+                            <i class="fas fa-sms mr-2"></i> Text Now
+                        </a>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="flex flex-wrap gap-4 sm:gap-6 mt-6 sm:mt-8 animate-fade-up"
+                        style="animation-delay: 0.9s;">
+                        <div class="flex items-center gap-2 text-white/80">
+                            <i class="fas fa-shield-alt text-brand-blue text-xl"></i>
+                            <span class="text-sm font-semibold">Licensed & Insured</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-white/80">
+                            <i class="fas fa-star text-yellow-400 text-xl"></i>
+                            <span class="text-sm font-semibold">5-Star Rated</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-white/80">
+                            <i class="fas fa-tools text-brand-red text-xl"></i>
+                            <span class="text-sm font-semibold">Installation Warranty</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator hidden sm:block">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION DIVIDER ===== -->
+    <div class="section-divider"></div>
+
+    <!-- ===== ROOF REPLACEMENT IN MIDDLESEX COUNTY ===== -->
+    <section class="py-20 lg:py-28 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+
+                <!-- Intro: Local Context -->
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <span class="inline-block bg-brand-red/10 text-brand-red font-bold text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-4">Middlesex County Roofing Experts</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-dark mb-6">
+                        Roof Replacement Built for <span class="text-brand-red">Massachusetts Weather</span>
+                    </h2>
+                </div>
+
+                <div class="space-y-6 text-gray-600 text-base sm:text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                    <p>
+                        Homes across Middlesex County take a beating from the New England climate. From the colonial-era properties in Concord to the 1980s and 1990s subdivisions that line the neighborhoods of Westford, Chelmsford, and Littleton, the roofing challenges are as varied as the housing stock itself. Many of these homes were built with three-tab asphalt shingles rated for 20 to 25 years — and decades of harsh winters, ice storms, and summer nor'easters have pushed those roofs well past their useful life. When repairs are no longer enough, a full roof replacement is the smartest long-term investment you can make for your home.
+                    </p>
+                    <p>
+                        Our crew works exclusively in this region. We understand the specific construction styles common in Acton, Groton, and the surrounding towns: steep-pitch colonials with multiple dormers, ranch-style homes with low-slope sections, and cape-style houses with complex roof geometry. That local knowledge is critical because the replacement approach for a modern hip roof in Chelmsford is completely different from what a 1970s split-level in Littleton requires — from material selection to ventilation design to ice-and-water shield placement.
+                    </p>
+
+                    <!-- Technical Section: Signs You Need Replacement -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100 my-8" data-aos="fade-up">
+                        <h3 class="text-2xl font-black text-brand-dark mb-6">
+                            <i class="fas fa-search text-brand-red mr-2"></i> Signs Your Roof Needs Replacement
+                        </h3>
+                        <div class="space-y-4">
+                            <p>Many homeowners don't realize their roof has reached the end of its lifespan until a major leak forces the issue. Here are the most common signs we see across Middlesex County that indicate it's time for a full replacement rather than another repair:</p>
+                            <ul class="space-y-3 ml-1">
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-angle-right text-brand-red mt-1 flex-shrink-0"></i>
+                                    <span><strong>Your roof is 20+ years old with original shingles.</strong> Most three-tab asphalt shingles installed in the 1990s and early 2000s across Westford, Chelmsford, and surrounding towns have reached or exceeded their rated lifespan. Even if they look acceptable from the ground, the granule loss and brittleness make them unreliable against the next major storm.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-angle-right text-brand-red mt-1 flex-shrink-0"></i>
+                                    <span><strong>Widespread curling, buckling, or cupping shingles.</strong> When shingles across large sections of your roof are curling at the edges or buckling in the middle, it signals the underlying material has failed. This isn't a localized issue that a patch can fix — it's system-wide deterioration that will only accelerate.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-angle-right text-brand-red mt-1 flex-shrink-0"></i>
+                                    <span><strong>Excessive granule loss in gutters and downspouts.</strong> If your gutters are filling with dark, gritty granules after every rain, your shingles are losing the protective coating that shields them from UV damage and water penetration. Once granules are gone, the exposed asphalt degrades rapidly — often within a single season.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-angle-right text-brand-red mt-1 flex-shrink-0"></i>
+                                    <span><strong>Multiple active leaks or recurring repairs.</strong> If you've had the same areas repaired more than once, or if new leaks keep appearing in different locations, the roof system itself is failing. Continuing to patch individual spots becomes more expensive than replacing the entire roof — and doesn't solve the underlying problem.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-angle-right text-brand-red mt-1 flex-shrink-0"></i>
+                                    <span><strong>Sagging or uneven roof deck.</strong> Visible sagging from the ground or a spongy feel underfoot on the roof indicates the plywood decking has absorbed moisture and begun to deteriorate. This is a structural concern that requires immediate attention — new shingles over compromised decking will fail prematurely.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-angle-right text-brand-red mt-1 flex-shrink-0"></i>
+                                    <span><strong>Daylight visible through the attic roof boards.</strong> If you can see pinpoints of light coming through your roof deck from inside the attic, water is already getting in. In homes across Concord and Groton, we regularly find attics with moisture damage, mold growth, and compromised insulation that went unnoticed for years.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- What to Know Before Replacing -->
+                    <div class="bg-red-50 rounded-2xl p-6 sm:p-8 border border-red-100 my-8" data-aos="fade-up">
+                        <h3 class="text-2xl font-black text-brand-dark mb-6">
+                            <i class="fas fa-exclamation-circle text-brand-red mr-2"></i> Common Mistakes Homeowners Make with Roof Replacement
+                        </h3>
+                        <div class="space-y-4">
+                            <p>A new roof is one of the largest investments you'll make in your home. We see homeowners across Middlesex County make these costly mistakes every year:</p>
+                            <ul class="space-y-3 ml-1">
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-times-circle text-red-500 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Don't install a second layer of shingles over the old ones.</strong> While Massachusetts building code allows up to two layers, layering traps moisture between them, adds excessive weight to the roof structure, voids most manufacturer warranties, and hides underlying deck damage. A proper tear-off is always the right approach.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-times-circle text-red-500 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Don't choose a contractor based solely on the lowest bid.</strong> The cheapest quote often means corners will be cut — skipping ice-and-water shield in valleys, using fewer nails per shingle, or hiring unlicensed subcontractors. A roof replacement done wrong can fail in under five years and cost you double to redo.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-times-circle text-red-500 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Don't ignore ventilation during the replacement.</strong> Proper ridge and soffit ventilation is critical in Massachusetts. Without it, trapped heat and moisture in the attic cause premature shingle failure, ice dams in winter, and mold growth. Many older homes in Acton and Littleton have inadequate ventilation that must be corrected during replacement.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-times-circle text-red-500 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Don't hire a contractor without a Massachusetts CSL.</strong> Massachusetts requires roofing contractors to carry a Construction Supervisor License and proper liability insurance. An unlicensed installation voids manufacturer warranties, leaves you with no legal recourse, and may not meet local building code requirements.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-times-circle text-red-500 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Don't skip the permit.</strong> Roof replacements in most Middlesex County towns require a building permit. Skipping it to save time can result in fines, complications when selling your home, and an installation that was never inspected for code compliance. We handle all permitting for you as part of every project.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Step-by-Step Process -->
+                    <div class="my-8" data-aos="fade-up">
+                        <h3 class="text-2xl font-black text-brand-dark mb-8 text-center">
+                            <i class="fas fa-clipboard-list text-brand-blue mr-2"></i> Our 5-Step Replacement Process
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-brand-red text-white flex items-center justify-center flex-shrink-0 font-black text-lg">1</div>
+                                <div>
+                                    <h4 class="font-bold text-brand-dark text-lg mb-1">Comprehensive Roof Inspection</h4>
+                                    <p class="text-gray-500">We start with a thorough ground-level and on-roof assessment. We inspect every flashing point, valley, ridge vent, soffit, and the condition of the existing decking. For complex roof geometries, we use drone imaging to capture high-resolution detail. We also inspect your attic for ventilation, insulation, and moisture issues that must be addressed during replacement.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-brand-red text-white flex items-center justify-center flex-shrink-0 font-black text-lg">2</div>
+                                <div>
+                                    <h4 class="font-bold text-brand-dark text-lg mb-1">Material Selection & Detailed Proposal</h4>
+                                    <p class="text-gray-500">We walk you through material options — from architectural shingles to premium designer lines — and help you choose the right product for your home, budget, and aesthetic. You receive a written proposal that itemizes every component: tear-off, decking repairs, ice-and-water shield, underlayment, shingles, flashing, ventilation, and cleanup. No vague estimates, no surprise add-ons.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-brand-red text-white flex items-center justify-center flex-shrink-0 font-black text-lg">3</div>
+                                <div>
+                                    <h4 class="font-bold text-brand-dark text-lg mb-1">Complete Tear-Off & Deck Preparation</h4>
+                                    <p class="text-gray-500">We strip the old roofing system down to the plywood decking, inspect every square foot for rot or damage, and replace any compromised sections. We install new ice-and-water shield along eaves, valleys, and penetrations per Massachusetts code, then apply synthetic underlayment across the entire roof deck for maximum protection.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-brand-red text-white flex items-center justify-center flex-shrink-0 font-black text-lg">4</div>
+                                <div>
+                                    <h4 class="font-bold text-brand-dark text-lg mb-1">Professional Installation</h4>
+                                    <p class="text-gray-500">Our licensed crew installs your new roof system following manufacturer specifications and local building codes. Every shingle is hand-nailed to the correct pattern, all flashing is custom-bent and sealed, and ridge ventilation is installed or upgraded. We protect your landscaping with tarps, contain all debris, and run a magnet sweep for stray nails across your entire property.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-brand-red text-white flex items-center justify-center flex-shrink-0 font-black text-lg">5</div>
+                                <div>
+                                    <h4 class="font-bold text-brand-dark text-lg mb-1">Final Inspection & Warranty</h4>
+                                    <p class="text-gray-500">We perform a final quality inspection, walk the completed project with you, and provide before-and-after documentation. You receive both a manufacturer warranty on materials and our written workmanship warranty on labor. We also handle the building permit close-out so everything is documented and code-compliant.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>
+                        Whether your home is a 1990s colonial in Westford with original three-tab shingles or a century-old farmhouse in Groton that's overdue for a complete roofing overhaul, we have the experience, the licensing, and the local knowledge to get it right. We don't subcontract our work, we don't use unlicensed laborers, and we don't disappear after cashing the check. Every roof replacement we complete in Middlesex County is one we stand behind personally.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BENEFITS SECTION ===== -->
+    <section id="benefits" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span
+                    class="inline-block bg-brand-red/10 text-brand-red font-bold text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-4">Why
+                    Choose Us</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-dark mb-4">
+                    Roof Replacement Done <span class="text-brand-red">Right</span>
+                </h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-lg">We deliver honest, high-quality roof replacement services
+                    backed by real warranties and professional craftsmanship.</p>
+            </div>
+
+            <!-- Benefits Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefit 1 -->
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="benefit-icon bg-brand-blue/10 text-brand-blue">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Free Replacement Estimate</h3>
+                    <p class="text-gray-500">No strings attached. We'll assess your roof and provide a free replacement
+                        estimate.</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon bg-brand-red/10 text-brand-red">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Materials & Labor Guaranteed</h3>
+                    <p class="text-gray-500">All materials and labor are fully guaranteed. Your investment is protected.
+                    </p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon bg-green-100 text-green-600">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Fast Response Time</h3>
+                    <p class="text-gray-500">We come to you quickly. No long waits — just prompt, reliable service.</p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon bg-yellow-100 text-yellow-600">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Licensed & Insured Crew</h3>
+                    <p class="text-gray-500">Our entire crew is fully licensed and insured for your peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== URGENCY / PARALLAX SECTION ===== -->
+    <section class="parallax-section py-24 lg:py-32 relative">
+        <div class="parallax-bg"
+            style="background-image: url('Aged%20and%20damaged%20shingles%20with%20moss%20growing.jpeg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-dark/85 to-brand-red/70"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 text-center">
+            <div data-aos="zoom-in" data-aos-duration="800">
+                <i class="fas fa-exclamation-triangle text-yellow-400 text-5xl mb-6"></i>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
+                    Don't Wait for Your Aging Roof<br>
+                    to Become a <span class="text-brand-red">Costly Emergency</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+                    An aging roof gets worse every season. Get ahead of the problem with a free
+                    professional assessment before the next storm hits.
+                </p>
+                <a href="#form-section" class="btn-primary text-lg">
+                    <i class="fas fa-calendar-check mr-2"></i> Schedule FREE Estimate
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATS COUNTER ===== -->
+    <section class="bg-brand-dark py-16">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="counter-box" data-aos="fade-up" data-aos-delay="0">
+                    <div class="counter-number text-white" data-target="500">0</div>
+                    <div class="text-brand-blue font-bold text-sm uppercase tracking-wide mt-2">Happy Homeowners</div>
+                </div>
+                <div class="counter-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="counter-number text-white" data-target="20">0</div>
+                    <div class="text-brand-blue font-bold text-sm uppercase tracking-wide mt-2">Cities Served</div>
+                </div>
+                <div class="counter-box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="counter-number text-white" data-target="15">0</div>
+                    <div class="text-brand-blue font-bold text-sm uppercase tracking-wide mt-2">Years Experience</div>
+                </div>
+                <div class="counter-box" data-aos="fade-up" data-aos-delay="300">
+                    <div class="counter-number text-white" data-target="100">0</div>
+                    <div class="text-brand-blue font-bold text-sm uppercase tracking-wide mt-2">Satisfaction Rate %
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== TRUST SECTION WITH IMAGE ===== -->
+    <section class="py-20 lg:py-28 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <!-- Image -->
+                <div class="relative" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="Home3-w-Drone.jpeg" alt="Beautiful roofing work"
+                            class="w-full h-[400px] lg:h-[500px] object-cover">
+                    </div>
+                    <!-- Floating Badge -->
+                    <div
+                        class="absolute -bottom-6 -right-4 sm:right-4 bg-brand-red text-white p-5 rounded-2xl shadow-xl animate-float">
+                        <div class="text-3xl font-black">100%</div>
+                        <div class="text-sm font-bold uppercase">Guaranteed</div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div data-aos="fade-left" data-aos-duration="1000">
+                    <span
+                        class="inline-block bg-brand-red/10 text-brand-red font-bold text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-4">About
+                        Us</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-dark mb-6 leading-tight">
+                        Trusted by <span class="text-brand-red">Hundreds</span> of Homeowners
+                    </h2>
+                    <p class="text-gray-500 text-lg mb-8 leading-relaxed">
+                        At Mighty Dog Roofing, we believe every homeowner deserves honest, high-quality roof replacement
+                        work. Our licensed and insured crew brings professionalism and expertise to every replacement project
+                        — from single-family homes to complex multi-slope roofs.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-check text-brand-blue text-sm"></i>
+                            </div>
+                            <p class="text-gray-600 font-medium">Free replacement estimate — no strings attached</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-check text-brand-blue text-sm"></i>
+                            </div>
+                            <p class="text-gray-600 font-medium">All materials & labor guaranteed</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-check text-brand-blue text-sm"></i>
+                            </div>
+                            <p class="text-gray-600 font-medium">Fast response time — we come to you</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-check text-brand-blue text-sm"></i>
+                            </div>
+                            <p class="text-gray-600 font-medium">Licensed & fully insured crew</p>
+                        </div>
+                    </div>
+
+                    <a href="#form-section" class="btn-primary inline-block">
+                        <i class="fas fa-calendar-check mr-2"></i> Schedule FREE Estimate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FORM SECTION ===== -->
+    <section id="form-section" class="py-20 lg:py-28 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-dark to-brand-dark/95"></div>
+        <!-- Decorative Elements -->
+        <div class="absolute top-10 left-10 w-40 h-40 bg-brand-red/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-60 h-60 bg-brand-blue/10 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <!-- Left Content -->
+                <div data-aos="fade-right">
+                    <span
+                        class="inline-block bg-brand-blue/20 text-brand-blue font-bold text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-4">Contact
+                        Us</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
+                        Get Your Free Roof<br>
+                        <span class="text-brand-blue">Replacement Estimate Today</span>
+                    </h2>
+                    <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                        Not ready to call? Fill out the form and we'll reach out within 24 hours. No pressure, no
+                        obligation — just honest roof replacement advice.
+                    </p>
+
+                    <div class="space-y-5 mb-8">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-red/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone-alt text-brand-red text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="text-gray-400 text-sm font-semibold uppercase">Call Us</div>
+                                <a href="tel:9786345611"
+                                    class="text-white font-bold text-lg hover:text-brand-blue transition-colors">(978)
+                                    634-5611</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-blue/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-clock text-brand-blue text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="text-gray-400 text-sm font-semibold uppercase">Response Time</div>
+                                <div class="text-white font-bold text-lg">Within 24 Hours</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-hand-holding-usd text-green-400 text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="text-gray-400 text-sm font-semibold uppercase">Cost</div>
+                                <div class="text-white font-bold text-lg">100% Free Estimate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div data-aos="fade-left">
+                    <div class="form-container">
+                        <div class="form-header">
+                            <h3 class="text-white text-2xl font-black"><i class="fas fa-clipboard-check mr-2"></i>
+                                Schedule FREE Estimate</h3>
+                            <p class="text-white/80 mt-1 text-sm">Fill out the form below and we'll be in touch shortly.
+                            </p>
+                        </div>
+
+                        <div class="p-6 sm:p-8">
+                            <form id="roofing-replacement-form" onsubmit="return webLeadFormSubmit(event)" class="space-y-4" novalidate>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="form-label" for="first_name">First Name *</label>
+                                        <input type="text" id="first_name" name="first_name" class="form-input"
+                                            placeholder="First Name" required minlength="2">
+                                        <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
+                                    </div>
+                                    <div>
+                                        <label class="form-label" for="last_name">Last Name *</label>
+                                        <input type="text" id="last_name" name="last_name" class="form-input"
+                                            placeholder="Last Name" required minlength="2">
+                                        <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="form-label" for="phone">Phone *</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input"
+                                        placeholder="(978) 000-0000" required>
+                                    <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
+                                </div>
+
+                                <div>
+                                    <label class="form-label" for="street">Street Address *</label>
+                                    <input type="text" id="street" name="street" class="form-input"
+                                        placeholder="123 Main St" required minlength="3">
+                                    <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="form-label" for="city">City</label>
+                                        <input type="text" id="city" name="city" class="form-input"
+                                            placeholder="e.g. Lowell">
+                                    </div>
+                                    <div>
+                                        <label class="form-label" for="zip">Zip Code *</label>
+                                        <input type="text" id="zip" name="zip" class="form-input" placeholder="01850"
+                                            required maxlength="10">
+                                        <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="form-label" for="message">Message (Optional)</label>
+                                    <textarea id="message" name="message" rows="3" class="form-input rounded-xl"
+                                        placeholder="How can we help?"></textarea>
+                                </div>
+
+                                <!-- UTM Hidden Fields -->
+                                <input type="hidden" id="utm_source" name="utm_source">
+                                <input type="hidden" id="utm_medium" name="utm_medium">
+                                <input type="hidden" id="utm_campaign" name="utm_campaign">
+                                <input type="hidden" id="utm_content" name="utm_content">
+                                <input type="hidden" id="utm_term" name="utm_term">
+                                <input type="hidden" id="utm_id" name="utm_id">
+
+                                <button type="submit" class="form-submit mt-2">
+                                    <i class="fas fa-clipboard-check mr-2"></i> Get Free Estimate
+                                </button>
+                                <p class="text-center text-xs text-gray-400 mt-4 italic">* Required fields. Your information is 100%
+                                    secure.</p>
+                            </form>
+
+                            <!-- Success Message -->
+                            <div id="form-success-message" class="form-success">
+                                <div class="checkmark">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <h4 class="text-2xl font-black text-brand-dark mb-2">Message Sent!</h4>
+                                <p class="text-gray-500">Thank you! We'll be in touch soon.</p>
+                                <button onclick="location.reload()"
+                                    class="mt-8 text-brand-blue font-bold hover:underline">Send another message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICE AREAS ===== -->
+    <section id="areas" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span
+                    class="inline-block bg-brand-blue/10 text-brand-blue font-bold text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-4">Coverage
+                    Area</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-dark mb-4">
+                    Proudly <span class="text-brand-blue">Serving</span>
+                </h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-lg">We provide expert roof replacement services across these
+                    Massachusetts communities.</p>
+            </div>
+
+            <!-- Cities Grid -->
+            <div class="flex flex-wrap justify-center gap-3" data-aos="fade-up" data-aos-delay="200">
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="0">Acton, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="30">Lowell, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="60">Littleton, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="90">Tewksbury, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="120">Ayer, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="150">Chelmsford, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="180">Leominster, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="210">Stow, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="240">Bolton, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="270">Dracut, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="300">Groton, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="330">Bedford, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="360">Concord, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="390">Harvard, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="420">Carlisle, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="450">Westford, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="480">Billerica, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="510">Dunstable, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="540">Boxborough, MA</span>
+                <span class="city-tag" data-aos="zoom-in" data-aos-delay="570">Tyngsborough, MA</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FINAL CTA ===== -->
+    <section class="py-20 lg:py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-red to-brand-red/90 gradient-animate"></div>
+        <!-- Decorative pattern -->
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22><path d=%22M30 0L60 30L30 60L0 30Z%22 fill=%22white%22/></svg>'); background-size: 60px 60px;">
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 lg:px-8 text-center">
+            <div data-aos="zoom-in">
+                <i class="fas fa-home text-white/30 text-6xl mb-6"></i>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
+                    Need a Roof Replacement?
+                </h2>
+                <p class="text-white/90 text-xl mb-10 max-w-2xl mx-auto">
+                    Join hundreds of satisfied homeowners. Get your free roof replacement estimate today — no pressure, no
+                    obligation.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#form-section"
+                        class="inline-flex items-center justify-center gap-2 bg-white text-brand-red px-8 py-4 rounded-full font-bold text-lg uppercase tracking-wide hover:bg-gray-100 transition-all hover:scale-105 hover:shadow-xl">
+                        <i class="fas fa-calendar-check"></i> Schedule FREE Estimate
+                    </a>
+                    <a href="tel:9786345611"
+                        class="inline-flex items-center justify-center gap-2 bg-transparent text-white px-8 py-4 rounded-full font-bold text-lg uppercase tracking-wide border-2 border-white hover:bg-white hover:text-brand-red transition-all hover:scale-105">
+                        <i class="fas fa-phone-alt"></i> (978) 634-5611
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-brand-dark py-16">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="text-center">
+                <!-- Logo -->
+                <img src="mightydogroofing.png" alt="Mighty Dog Roofing" class="w-48 mx-auto mb-6">
+
+                <!-- Trust Line -->
+                <p class="text-gray-300 text-xl font-semibold mb-4 italic">
+                    "No pressure. No obligation. Just honest roof replacement work."
+                </p>
+
+                <!-- Phone -->
+                <a href="tel:9786345611"
+                    class="inline-flex items-center gap-2 text-brand-blue text-lg font-bold hover:text-white transition-colors mb-4">
+                    <i class="fas fa-phone-alt"></i> (978) 634-5611
+                </a>
+
+                <!-- Address -->
+                <p class="text-gray-400 text-sm mb-8">
+                    <i class="fas fa-map-marker-alt text-brand-red mr-1"></i>
+                    66 Tadmuck Road Unit 6, Westford, MA 01886
+                </p>
+
+                <!-- Divider -->
+                <div class="w-24 h-1 bg-gradient-to-r from-brand-red to-brand-blue mx-auto mb-8 rounded-full"></div>
+
+                <!-- Legal Links -->
+                <div class="flex flex-wrap justify-center gap-4 mb-6">
+                    <a href="privacy-policy.html" class="text-gray-400 text-sm hover:text-brand-blue transition-colors">Privacy Policy</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="terms-of-use.html" class="text-gray-400 text-sm hover:text-brand-blue transition-colors">Terms of Use</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="about-us.html" class="text-gray-400 text-sm hover:text-brand-blue transition-colors">About Us</a>
+                </div>
+
+                <!-- Copyright -->
+                <p class="text-gray-500 text-sm">
+                    &copy; 2026 Mighty Dog Roofing. All Rights Reserved. Licensed & Insured.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== FLOATING BADGES (Mobile) ===== -->
+    <div class="fixed bottom-4 left-4 right-4 z-[999] flex gap-3 md:hidden"
+        style="animation: float 3s ease-in-out infinite;">
+        <a href="tel:9786345611"
+            class="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-brand-red to-brand-red/90 text-white py-3 px-4 rounded-full text-sm font-bold shadow-lg hover:scale-105 transition-all text-decoration-none">
+            <i class="fas fa-phone-alt"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="sms:+19786345611&body=Hi%2C%20I%20need%20a%20roof%20replacement%20estimate"
+            class="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white py-3 px-4 rounded-full text-sm font-bold shadow-lg hover:scale-105 transition-all text-decoration-none">
+            <i class="fas fa-sms"></i>
+            <span>Text Now</span>
+        </a>
+    </div>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ===== AOS Library ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+            // ===== UTM CAPTURE =====
+            (function () {
+                var params = new URLSearchParams(window.location.search);
+                var utmFields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id'];
+                utmFields.forEach(function (field) {
+                    var value = params.get(field);
+                    if (value) {
+                        var el = document.getElementById(field);
+                        if (el) el.value = value;
+                    }
+                });
+            })();
+
+        // ===== FORM VALIDATION & SUBMISSION =====
+        function showError(input, message) {
+            input.classList.add('input-error');
+            input.classList.remove('input-valid');
+            const errorEl = input.parentElement.querySelector('.form-error');
+            if (errorEl) {
+                errorEl.textContent = message;
+                errorEl.classList.remove('hidden');
+            }
+        }
+
+        function clearError(input) {
+            input.classList.remove('input-error');
+            const errorEl = input.parentElement.querySelector('.form-error');
+            if (errorEl) {
+                errorEl.textContent = '';
+                errorEl.classList.add('hidden');
+            }
+        }
+
+        function markValid(input) {
+            input.classList.remove('input-error');
+            input.classList.add('input-valid');
+            const errorEl = input.parentElement.querySelector('.form-error');
+            if (errorEl) {
+                errorEl.textContent = '';
+                errorEl.classList.add('hidden');
+            }
+        }
+
+        function formatPhone(value) {
+            var digits = value.replace(/\D/g, '');
+            if (digits.length === 0) return '';
+            if (digits.length <= 3) return '(' + digits;
+            if (digits.length <= 6) return '(' + digits.slice(0, 3) + ') ' + digits.slice(3);
+            return '(' + digits.slice(0, 3) + ') ' + digits.slice(3, 6) + '-' + digits.slice(6, 10);
+        }
+
+        // Auto-format phone on input
+        document.getElementById('phone').addEventListener('input', function (e) {
+            var cursorPos = this.selectionStart;
+            var oldLength = this.value.length;
+            this.value = formatPhone(this.value);
+            var newLength = this.value.length;
+            this.setSelectionRange(cursorPos + (newLength - oldLength), cursorPos + (newLength - oldLength));
+        });
+
+        // Clear errors on input
+        document.querySelectorAll('#roofing-replacement-form .form-input').forEach(function (input) {
+            input.addEventListener('input', function () {
+                if (this.value.trim().length > 0) clearError(this);
+            });
+        });
+
+        function validateForm(form) {
+            var isValid = true;
+            var firstError = null;
+
+            // First Name
+            var firstName = form.querySelector('#first_name');
+            if (!firstName.value.trim() || firstName.value.trim().length < 2) {
+                showError(firstName, !firstName.value.trim() ? 'First name is required.' : 'Enter at least 2 characters.');
+                isValid = false;
+                if (!firstError) firstError = firstName;
+            } else { markValid(firstName); }
+
+            // Last Name
+            var lastName = form.querySelector('#last_name');
+            if (!lastName.value.trim() || lastName.value.trim().length < 2) {
+                showError(lastName, !lastName.value.trim() ? 'Last name is required.' : 'Enter at least 2 characters.');
+                isValid = false;
+                if (!firstError) firstError = lastName;
+            } else { markValid(lastName); }
+
+            // Phone
+            var phone = form.querySelector('#phone');
+            var phoneDigits = phone.value.replace(/\D/g, '');
+            if (!phoneDigits || phoneDigits.length < 10) {
+                showError(phone, !phoneDigits ? 'Phone number is required.' : 'Enter a valid 10-digit phone number.');
+                isValid = false;
+                if (!firstError) firstError = phone;
+            } else { markValid(phone); }
+
+            // Street Address
+            var street = form.querySelector('#street');
+            if (!street.value.trim() || street.value.trim().length < 3) {
+                showError(street, !street.value.trim() ? 'Street address is required.' : 'Enter a valid street address.');
+                isValid = false;
+                if (!firstError) firstError = street;
+            } else { markValid(street); }
+
+            // Zip Code
+            var zip = form.querySelector('#zip');
+            var zipValue = zip.value.trim();
+            var zipRegex = /^\d{5}(-\d{4})?$/;
+            if (!zipValue || !zipRegex.test(zipValue)) {
+                showError(zip, !zipValue ? 'Zip code is required.' : 'Enter a valid 5-digit zip code.');
+                isValid = false;
+                if (!firstError) firstError = zip;
+            } else { markValid(zip); }
+
+            if (firstError) firstError.focus();
+            return isValid;
+        }
+
+        function webLeadFormSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+
+            // Validate before submitting
+            if (!validateForm(form)) return false;
+
+            const submitBtn = form.querySelector('.form-submit');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+
+            // Map form data for AccuLynx
+            const formData = new FormData(form);
+            const acculynxData = new FormData();
+            acculynxData.append('FirstName', formData.get('first_name'));
+            acculynxData.append('LastName', formData.get('last_name'));
+            acculynxData.append('Phone', formData.get('phone'));
+            acculynxData.append('Street', formData.get('street'));
+            acculynxData.append('City', formData.get('city'));
+            acculynxData.append('Zip', formData.get('zip'));
+
+            // Append UTM data to Message
+            var message = formData.get('message') || '';
+            var utmParts = [];
+            ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id'].forEach(function (key) {
+                var val = formData.get(key);
+                if (val) utmParts.push(key + '=' + val);
+            });
+            if (utmParts.length) {
+                message += (message ? '\n\n' : '') + '--- UTM ---\n' + utmParts.join('\n');
+            }
+            acculynxData.append('Message', message);
+
+            // Submit to AccuLynx
+            fetch('https://leads.acculynx.com/api/leads/submit-new-lead?formID=baf9f419-1a06-46ed-96b8-30c69263a592', {
+                method: 'post',
+                mode: 'no-cors',
+                body: acculynxData
+            })
+                .then(response => {
+                    console.log('WebLeadForm Submit Success');
+
+                    // === CALLRAIL MANUAL SUBMISSION CAPTURE ===
+                    function triggerCallRail(retries) {
+                        if (window.CallTrk && typeof window.CallTrk.captureForm === 'function') {
+                            window.CallTrk.captureForm(form);
+                            console.log('CallRail captureForm executed successfully');
+                        } else if (retries > 0) {
+                            console.warn('CallRail captureForm undefined, retrying...');
+                            setTimeout(() => triggerCallRail(retries - 1), 500);
+                        } else {
+                            console.error('CallRail captureForm timeout. Are you testing locally via file:/// ?');
+                        }
+                    }
+                    triggerCallRail(6); // 3 seconds timeout
+
+                    if (typeof FormTracker !== 'undefined' && FormTracker.submit) {
+                        FormTracker.submit(form);
+                    }
+                    // ==========================================
+
+                    document.getElementById('roofing-replacement-form').classList.add('hidden');
+                    document.getElementById('form-success-message').classList.add('show');
+                })
+                .catch(error => {
+                    console.error('WebLeadForm Submit Error:', error);
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-clipboard-check mr-2"></i> Get Free Estimate';
+                });
+
+            return false;
+        }
+
+        // ===== PRELOADER =====
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('preloader').classList.add('hidden');
+            }, 800);
+        });
+
+        // ===== AOS INIT =====
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 80,
+        });
+
+        // ===== HEADER SCROLL =====
+        const header = document.getElementById('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY;
+
+            if (currentScroll > 80) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // ===== MOBILE MENU =====
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('open');
+        });
+
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+        }
+
+        // ===== PROGRESS BAR =====
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.getElementById('progressBar').style.width = scrollPercent + '%';
+        });
+
+        // ===== BACK TO TOP =====
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('backToTop');
+            if (window.scrollY > 500) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        });
+
+        // ===== COUNTER ANIMATION =====
+        const counters = document.querySelectorAll('.counter-number');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    const suffix = counter.getAttribute('data-target') === '100' ? '%' : '+';
+                    let current = 0;
+                    const increment = target / 60;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        counter.textContent = Math.floor(current) + suffix;
+                    }, 30);
+                    counterObserver.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => counterObserver.observe(counter));
+
+        // ===== PARALLAX ON SCROLL =====
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            document.querySelectorAll('.parallax-bg').forEach(bg => {
+                const speed = 0.3;
+                bg.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // ===== REVEAL ON SCROLL =====
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 100;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
