@@ -761,6 +761,146 @@
         .form-input.input-valid {
             border-color: #10b981;
         }
+
+        /* ===== HERO 2-COLUMN FORM ===== */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        @media (min-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+            }
+        }
+        .hero-form-container .form-container {
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        @media (min-width: 1024px) {
+            .hero-form-container .form-container {
+                margin: 0;
+                max-width: none;
+            }
+        }
+        .hero-form-container .form-header {
+            padding: 1.25rem 1.5rem;
+        }
+        .hero-form-container .form-input,
+        .hero-form-container .form-select {
+            padding: 10px 14px;
+            font-size: 14px;
+        }
+        .hero-form-container .form-submit {
+            padding: 12px;
+            font-size: 14px;
+        }
+        .hero-form-container .p-6 {
+            padding: 1.25rem !important;
+        }
+
+        /* ===== SOCIAL PROOF BAR ===== */
+        .social-proof-bar {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        /* ===== REVIEW CARDS ===== */
+        .review-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid #f3f4f6;
+            transition: all 0.3s ease;
+        }
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+        .review-stars {
+            color: #facc15;
+            font-size: 1.25rem;
+            letter-spacing: 2px;
+        }
+
+        /* ===== AWARDS SECTION ===== */
+        .awards-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .awards-grid img {
+            height: 120px;
+            width: auto;
+            max-width: 200px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+            opacity: 0.85;
+            transition: all 0.3s ease;
+        }
+        .awards-grid img:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        /* ===== FAQ ACCORDION ===== */
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 0.75rem;
+            border: 1px solid #e5e7eb;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .faq-item:hover {
+            border-color: #00B7EA;
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #1a1a2e;
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-family: inherit;
+        }
+        .faq-question:hover {
+            color: #00B7EA;
+        }
+        .faq-question .faq-icon {
+            font-size: 1.25rem;
+            transition: transform 0.3s ease;
+            color: #00B7EA;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+        .faq-item.active .faq-question .faq-icon {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+        .faq-answer-inner {
+            padding: 0 1.5rem 1.25rem;
+            color: #6b7280;
+            line-height: 1.7;
+        }
     </style>
 </head>
 
@@ -819,7 +959,7 @@
                     <svg class="icon text-brand-blue"><use href="#i-phone"/></svg>
                     978-759-4692
                 </a>
-                <a href="#form-section" class="btn-primary text-sm !py-3 !px-6">
+                <a href="#hero-form" class="btn-primary text-sm !py-3 !px-6">
                     Schedule FREE Estimate
                 </a>
             </div>
@@ -844,11 +984,11 @@
                 onclick="closeMobileMenu()">Why Us</a>
             <a href="#services" class="text-white text-lg font-semibold hover:text-brand-blue transition-colors"
                 onclick="closeMobileMenu()">Services</a>
-            <a href="#form-section" class="text-white text-lg font-semibold hover:text-brand-blue transition-colors"
+            <a href="#hero-form" class="text-white text-lg font-semibold hover:text-brand-blue transition-colors"
                 onclick="closeMobileMenu()">Contact</a>
             <a href="#areas" class="text-white text-lg font-semibold hover:text-brand-blue transition-colors"
                 onclick="closeMobileMenu()">Areas</a>
-            <a href="#form-section" class="btn-primary mt-4" onclick="closeMobileMenu()">Schedule FREE Estimate</a>
+            <a href="#hero-form" class="btn-primary mt-4" onclick="closeMobileMenu()">Schedule FREE Estimate</a>
         </div>
     </header>
 
@@ -859,49 +999,136 @@
 
         <div class="hero-content w-full px-4 lg:px-8 pt-28 sm:pt-32 pb-12">
             <div class="max-w-7xl mx-auto">
-                <div class="max-w-3xl">
-                    <!-- Headline -->
-                    <h1
-                        class="text-3xl sm:text-5xl lg:text-7xl font-black text-white leading-tight mb-4 animate-slide-left">
-                        Expert <span class="shimmer-text">Roof Replacement</span> You Can Trust
-                    </h1>
+                <div class="hero-grid">
+                    <!-- Left Column: Text -->
+                    <div>
+                        <!-- Headline -->
+                        <h1
+                            class="text-3xl sm:text-5xl lg:text-7xl font-black text-white leading-tight mb-4 animate-slide-left">
+                            Expert <span class="shimmer-text">Roof Replacement</span> You Can Trust
+                        </h1>
 
-                    <!-- Subheadline -->
-                    <p class="text-base sm:text-xl lg:text-2xl text-gray-200 mb-6 sm:mb-8 animate-fade-up"
-                        style="animation-delay: 0.3s;">
-                        Aging roof, storm damage, or failing shingles? We replace it right. Licensed, insured, and backed by our
-                        installation warranty.
-                    </p>
+                        <!-- Subheadline -->
+                        <p class="text-base sm:text-xl lg:text-2xl text-gray-200 mb-6 sm:mb-8 animate-fade-up"
+                            style="animation-delay: 0.3s;">
+                            Middlesex County's trusted roofing experts. Serving Westford, Chelmsford, Acton and 30+ communities. Licensed, insured, and backed by our installation warranty.
+                        </p>
 
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-up"
-                        style="animation-delay: 0.6s;">
-                        <a href="tel:9787594692" class="btn-primary text-center text-base sm:text-lg !py-3 sm:!py-4">
-                            <svg class="icon mr-2"><use href="#i-phone"/></svg> Call Now
-                        </a>
-                        <a href="#form-section" class="btn-secondary text-center text-base sm:text-lg !py-3 sm:!py-4">
-                            <svg class="icon mr-2"><use href="#i-calendar-check"/></svg> Schedule FREE Estimate
-                        </a>
-                        <a href="sms:+19787594692&body=Hi%2C%20I%20need%20a%20roof%20replacement%20estimate"
-                            class="btn-text-now text-center text-base sm:text-lg !py-3 sm:!py-4">
-                            <svg class="icon mr-2"><use href="#i-sms"/></svg> Text Now
-                        </a>
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-up"
+                            style="animation-delay: 0.6s;">
+                            <a href="tel:9787594692" class="btn-primary text-center text-base sm:text-lg !py-3 sm:!py-4">
+                                <svg class="icon mr-2"><use href="#i-phone"/></svg> Call Now
+                            </a>
+                            <a href="sms:+19787594692&body=Hi%2C%20I%20need%20a%20roof%20replacement%20estimate"
+                                class="btn-text-now text-center text-base sm:text-lg !py-3 sm:!py-4">
+                                <svg class="icon mr-2"><use href="#i-sms"/></svg> Text Now
+                            </a>
+                        </div>
+
+                        <!-- Trust Badges -->
+                        <div class="flex flex-wrap gap-4 sm:gap-6 mt-6 sm:mt-8 animate-fade-up"
+                            style="animation-delay: 0.9s;">
+                            <div class="flex items-center gap-2 text-white/80">
+                                <svg class="icon icon-xl text-brand-blue"><use href="#i-shield"/></svg>
+                                <span class="text-sm font-semibold">Licensed & Insured</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-white/80">
+                                <svg class="icon icon-xl text-yellow-400"><use href="#i-star"/></svg>
+                                <span class="text-sm font-semibold">5-Star Rated</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-white/80">
+                                <svg class="icon icon-xl text-brand-red"><use href="#i-tools"/></svg>
+                                <span class="text-sm font-semibold">Installation Warranty</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Trust Badges -->
-                    <div class="flex flex-wrap gap-4 sm:gap-6 mt-6 sm:mt-8 animate-fade-up"
-                        style="animation-delay: 0.9s;">
-                        <div class="flex items-center gap-2 text-white/80">
-                            <svg class="icon icon-xl text-brand-blue"><use href="#i-shield"/></svg>
-                            <span class="text-sm font-semibold">Licensed & Insured</span>
-                        </div>
-                        <div class="flex items-center gap-2 text-white/80">
-                            <svg class="icon icon-xl text-yellow-400"><use href="#i-star"/></svg>
-                            <span class="text-sm font-semibold">5-Star Rated</span>
-                        </div>
-                        <div class="flex items-center gap-2 text-white/80">
-                            <svg class="icon icon-xl text-brand-red"><use href="#i-tools"/></svg>
-                            <span class="text-sm font-semibold">Installation Warranty</span>
+                    <!-- Right Column: Form -->
+                    <div class="hero-form-container animate-fade-up" style="animation-delay: 0.5s;" id="hero-form">
+                        <div class="form-container">
+                            <div class="form-header">
+                                <h3 class="text-white text-2xl font-black"><svg class="icon mr-2"><use href="#i-clipboard"/></svg>
+                                    Schedule FREE Estimate</h3>
+                                <p class="text-white/80 mt-1 text-sm">Fill out the form below and we'll be in touch shortly.
+                                </p>
+                            </div>
+
+                            <div class="p-6 sm:p-8">
+                                <form id="roofing-replacement-form" onsubmit="return webLeadFormSubmit(event)" class="space-y-4" novalidate>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div>
+                                            <label class="form-label" for="first_name">First Name *</label>
+                                            <input type="text" id="first_name" name="first_name" class="form-input"
+                                                placeholder="First Name" required minlength="2">
+                                            <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
+                                        </div>
+                                        <div>
+                                            <label class="form-label" for="last_name">Last Name *</label>
+                                            <input type="text" id="last_name" name="last_name" class="form-input"
+                                                placeholder="Last Name" required minlength="2">
+                                            <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="form-label" for="phone">Phone *</label>
+                                        <input type="tel" id="phone" name="phone" class="form-input"
+                                            placeholder="(978) 000-0000" required>
+                                        <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
+                                    </div>
+
+                                    <div>
+                                        <label class="form-label" for="street">Street Address *</label>
+                                        <input type="text" id="street" name="street" class="form-input"
+                                            placeholder="123 Main St" required minlength="3">
+                                        <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
+                                    </div>
+
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <label class="form-label" for="city">City</label>
+                                            <input type="text" id="city" name="city" class="form-input"
+                                                placeholder="e.g. Lowell">
+                                        </div>
+                                        <div>
+                                            <label class="form-label" for="zip">Zip Code *</label>
+                                            <input type="text" id="zip" name="zip" class="form-input" placeholder="01850"
+                                                required maxlength="10">
+                                            <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="form-label" for="message">Message (Optional)</label>
+                                        <textarea id="message" name="message" rows="3" class="form-input rounded-xl"
+                                            placeholder="How can we help?"></textarea>
+                                    </div>
+
+                                    <!-- UTM Hidden Fields -->
+                                    <input type="hidden" id="utm_source" name="utm_source">
+                                    <input type="hidden" id="utm_medium" name="utm_medium">
+                                    <input type="hidden" id="utm_campaign" name="utm_campaign">
+                                    <input type="hidden" id="utm_term" name="utm_term">
+
+                                    <button type="submit" class="form-submit mt-2">
+                                        <svg class="icon mr-2"><use href="#i-clipboard"/></svg> Get Free Estimate
+                                    </button>
+                                    <p class="text-center text-xs text-gray-400 mt-4 italic">* Required fields. Your information is 100%
+                                        secure.</p>
+                                </form>
+
+                                <!-- Success Message -->
+                                <div id="form-success-message" class="form-success">
+                                    <div class="checkmark">
+                                        <svg class="icon"><use href="#i-check"/></svg>
+                                    </div>
+                                    <h4 class="text-2xl font-black text-brand-dark mb-2">Message Sent!</h4>
+                                    <p class="text-gray-500">Thank you! We'll be in touch soon.</p>
+                                    <button onclick="location.reload()"
+                                        class="mt-8 text-brand-blue font-bold hover:underline">Send another message</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -919,6 +1146,29 @@
     <!-- ===== SECTION DIVIDER ===== -->
     <div class="section-divider"></div>
 
+    <!-- ===== SOCIAL PROOF BAR ===== -->
+    <section class="social-proof-bar py-4">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+                <div class="flex items-center gap-2">
+                    <div class="flex text-yellow-400">
+                        <svg class="icon"><use href="#i-star"/></svg>
+                        <svg class="icon"><use href="#i-star"/></svg>
+                        <svg class="icon"><use href="#i-star"/></svg>
+                        <svg class="icon"><use href="#i-star"/></svg>
+                        <svg class="icon"><use href="#i-star"/></svg>
+                    </div>
+                    <span class="font-bold text-brand-dark text-sm">Rated 5 Stars on Google</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <img src="../AWARDS/Logo_2024_TopPerformerPlatinumWarranty.png" alt="Top Performer Award" class="h-10 w-auto" loading="lazy">
+                    <img src="../AWARDS/Logo_2025_ProductExcellence.png" alt="Product Excellence 2025" class="h-10 w-auto" loading="lazy">
+                    <img src="../AWARDS/Logo_2026_ProductExcellence.png" alt="Product Excellence 2026" class="h-10 w-auto" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== ABOUT OUR ROOF REPLACEMENT SERVICES ===== -->
     <section class="py-20 lg:py-28 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 lg:px-8">
@@ -926,7 +1176,7 @@
                 <div class="text-center mb-12 reveal">
                     <span class="inline-block bg-brand-blue/10 text-brand-blue font-bold text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-4">Our Services</span>
                     <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-dark mb-6">
-                        Complete Roof Replacement for <span class="text-brand-blue">Greater Boston</span> Homes
+                        Complete Roof Replacement for <span class="text-brand-blue">Middlesex County</span> Homes
                     </h2>
                 </div>
 
@@ -1063,7 +1313,7 @@
                     An aging roof gets worse every season. Get ahead of the problem with a free
                     professional assessment before the next storm hits.
                 </p>
-                <a href="#form-section" class="btn-primary text-lg">
+                <a href="#hero-form" class="btn-primary text-lg">
                     <svg class="icon mr-2"><use href="#i-calendar-check"/></svg> Schedule FREE Estimate
                 </a>
             </div>
@@ -1095,6 +1345,68 @@
         </div>
     </section>
 
+    <!-- ===== REVIEWS / TESTIMONIALS ===== -->
+    <section class="py-20 lg:py-28 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <span class="inline-block bg-brand-blue/10 text-brand-blue font-bold text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-4">Testimonials</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-dark mb-4">
+                    What Our <span class="text-brand-blue">Customers Say</span>
+                </h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-lg">Real reviews from homeowners across Middlesex County.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="review-card reveal">
+                    <div class="review-stars mb-4">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">"Vish and his team replaced our entire roof in one day. Professional, clean, and the quality is outstanding. Highly recommend!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-blue/10 flex items-center justify-center font-bold text-brand-blue">M</div>
+                        <div>
+                            <div class="font-bold text-brand-dark">Michael T.</div>
+                            <div class="text-xs text-gray-400">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card reveal" style="transition-delay:.1s">
+                    <div class="review-stars mb-4">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">"Best roofing company in the area. They were honest, affordable, and did exactly what they promised. Our gutters look brand new."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-red/10 flex items-center justify-center font-bold text-brand-red">S</div>
+                        <div>
+                            <div class="font-bold text-brand-dark">Sarah L.</div>
+                            <div class="text-xs text-gray-400">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card reveal" style="transition-delay:.2s">
+                    <div class="review-stars mb-4">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">"After the storm damaged our roof, Mighty Dog was there the next morning. Fast, reliable, and they handled our insurance claim perfectly."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center font-bold text-green-600">J</div>
+                        <div>
+                            <div class="font-bold text-brand-dark">James R.</div>
+                            <div class="text-xs text-gray-400">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== AWARDS SECTION ===== -->
+    <section class="py-16 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 text-center">
+            <div class="reveal">
+                <span class="inline-block bg-brand-blue/20 text-brand-blue font-bold text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-4">Recognition</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mb-10">Our Awards & Certifications</h2>
+            </div>
+            <div class="awards-grid reveal" style="transition-delay:.1s">
+                <img src="../AWARDS/Logo_2024_TopPerformerPlatinumWarranty.png" alt="Top Performer Platinum Warranty 2024" loading="lazy">
+                <img src="../AWARDS/Logo_2025_ProductExcellence.png" alt="Product Excellence 2025" loading="lazy">
+                <img src="../AWARDS/Logo_2026_ProductExcellence.png" alt="Product Excellence 2026" loading="lazy">
+            </div>
+        </div>
+    </section>
 
     <!-- ===== TRUST SECTION WITH IMAGE ===== -->
     <section class="py-20 lg:py-28 bg-white overflow-hidden">
@@ -1162,158 +1474,9 @@
                         </div>
                     </div>
 
-                    <a href="#form-section" class="btn-primary inline-block">
+                    <a href="#hero-form" class="btn-primary inline-block">
                         <svg class="icon mr-2"><use href="#i-calendar-check"/></svg> Schedule FREE Estimate
                     </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FORM SECTION ===== -->
-    <section id="form-section" class="py-20 lg:py-28 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-dark to-brand-dark/95"></div>
-        <!-- Decorative Elements -->
-        <div class="absolute top-10 left-10 w-40 h-40 bg-brand-red/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-10 right-10 w-60 h-60 bg-brand-blue/10 rounded-full blur-3xl"></div>
-
-        <div class="relative z-10 max-w-7xl mx-auto px-4 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                <!-- Left Content -->
-                <div class="reveal-right">
-                    <span
-                        class="inline-block bg-brand-blue/20 text-brand-blue font-bold text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-4">Contact
-                        Us</span>
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
-                        Get Your Free Roof<br>
-                        <span class="text-brand-blue">Replacement Estimate Today</span>
-                    </h2>
-                    <p class="text-gray-300 text-lg mb-8 leading-relaxed">
-                        Not ready to call? Fill out the form and we'll reach out within 24 hours. No pressure, no
-                        obligation — just honest roof replacement advice.
-                    </p>
-
-                    <div class="space-y-5 mb-8">
-                        <div class="flex items-center gap-4">
-                            <div
-                                class="w-12 h-12 rounded-xl bg-brand-red/20 flex items-center justify-center flex-shrink-0">
-                                <svg class="icon icon-lg text-brand-red"><use href="#i-phone"/></svg>
-                            </div>
-                            <div>
-                                <div class="text-gray-400 text-sm font-semibold uppercase">Call Us</div>
-                                <a href="tel:9787594692"
-                                    class="text-white font-bold text-lg hover:text-brand-blue transition-colors">978-759-4692</a>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div
-                                class="w-12 h-12 rounded-xl bg-brand-blue/20 flex items-center justify-center flex-shrink-0">
-                                <svg class="icon icon-lg text-brand-blue"><use href="#i-clock"/></svg>
-                            </div>
-                            <div>
-                                <div class="text-gray-400 text-sm font-semibold uppercase">Response Time</div>
-                                <div class="text-white font-bold text-lg">Within 24 Hours</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div
-                                class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center flex-shrink-0">
-                                <svg class="icon icon-lg text-green-400"><use href="#i-hand-holding-usd"/></svg>
-                            </div>
-                            <div>
-                                <div class="text-gray-400 text-sm font-semibold uppercase">Cost</div>
-                                <div class="text-white font-bold text-lg">100% Free Estimate</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Form -->
-                <div class="reveal-left">
-                    <div class="form-container">
-                        <div class="form-header">
-                            <h3 class="text-white text-2xl font-black"><svg class="icon mr-2"><use href="#i-clipboard"/></svg>
-                                Schedule FREE Estimate</h3>
-                            <p class="text-white/80 mt-1 text-sm">Fill out the form below and we'll be in touch shortly.
-                            </p>
-                        </div>
-
-                        <div class="p-6 sm:p-8">
-                            <form id="roofing-replacement-form" onsubmit="return webLeadFormSubmit(event)" class="space-y-4" novalidate>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div>
-                                        <label class="form-label" for="first_name">First Name *</label>
-                                        <input type="text" id="first_name" name="first_name" class="form-input"
-                                            placeholder="First Name" required minlength="2">
-                                        <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
-                                    </div>
-                                    <div>
-                                        <label class="form-label" for="last_name">Last Name *</label>
-                                        <input type="text" id="last_name" name="last_name" class="form-input"
-                                            placeholder="Last Name" required minlength="2">
-                                        <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label class="form-label" for="phone">Phone *</label>
-                                    <input type="tel" id="phone" name="phone" class="form-input"
-                                        placeholder="(978) 000-0000" required>
-                                    <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
-                                </div>
-
-                                <div>
-                                    <label class="form-label" for="street">Street Address *</label>
-                                    <input type="text" id="street" name="street" class="form-input"
-                                        placeholder="123 Main St" required minlength="3">
-                                    <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
-                                </div>
-
-                                <div class="grid grid-cols-2 gap-4">
-                                    <div>
-                                        <label class="form-label" for="city">City</label>
-                                        <input type="text" id="city" name="city" class="form-input"
-                                            placeholder="e.g. Lowell">
-                                    </div>
-                                    <div>
-                                        <label class="form-label" for="zip">Zip Code *</label>
-                                        <input type="text" id="zip" name="zip" class="form-input" placeholder="01850"
-                                            required maxlength="10">
-                                        <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label class="form-label" for="message">Message (Optional)</label>
-                                    <textarea id="message" name="message" rows="3" class="form-input rounded-xl"
-                                        placeholder="How can we help?"></textarea>
-                                </div>
-
-                                <!-- UTM Hidden Fields -->
-                                <input type="hidden" id="utm_source" name="utm_source">
-                                <input type="hidden" id="utm_medium" name="utm_medium">
-                                <input type="hidden" id="utm_campaign" name="utm_campaign">
-                                <input type="hidden" id="utm_term" name="utm_term">
-
-                                <button type="submit" class="form-submit mt-2">
-                                    <svg class="icon mr-2"><use href="#i-clipboard"/></svg> Get Free Estimate
-                                </button>
-                                <p class="text-center text-xs text-gray-400 mt-4 italic">* Required fields. Your information is 100%
-                                    secure.</p>
-                            </form>
-
-                            <!-- Success Message -->
-                            <div id="form-success-message" class="form-success">
-                                <div class="checkmark">
-                                    <svg class="icon"><use href="#i-check"/></svg>
-                                </div>
-                                <h4 class="text-2xl font-black text-brand-dark mb-2">Message Sent!</h4>
-                                <p class="text-gray-500">Thank you! We'll be in touch soon.</p>
-                                <button onclick="location.reload()"
-                                    class="mt-8 text-brand-blue font-bold hover:underline">Send another message</button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1328,7 +1491,7 @@
                     class="inline-block bg-brand-blue/10 text-brand-blue font-bold text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-4">Coverage
                     Area</span>
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-dark mb-4">
-                    Proudly <span class="text-brand-blue">Serving</span>
+                    Proudly Serving <span class="text-brand-blue">Middlesex County</span>
                 </h2>
                 <p class="text-gray-500 max-w-2xl mx-auto text-lg">We provide expert roof replacement services across these
                     Massachusetts communities.</p>
@@ -1360,6 +1523,55 @@
         </div>
     </section>
 
+    <!-- ===== FAQ SECTION ===== -->
+    <section class="py-20 lg:py-28 bg-white">
+        <div class="max-w-3xl mx-auto px-4 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <span class="inline-block bg-brand-red/10 text-brand-red font-bold text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-4">FAQ</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-dark mb-4">
+                    Frequently Asked <span class="text-brand-red">Questions</span>
+                </h2>
+            </div>
+            <div class="reveal" style="transition-delay:.1s">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How long does a roof replacement take?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer"><div class="faq-answer-inner">Most residential roof replacements are completed in 1-3 days, depending on the size and complexity of your roof. We work efficiently to minimize disruption to your daily routine while maintaining the highest quality standards.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What roofing materials do you offer?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer"><div class="faq-answer-inner">We offer a wide range of roofing materials including asphalt shingles, architectural shingles, metal roofing, and flat roofing systems. We'll help you choose the best option based on your budget, style preferences, and the unique weather demands of Middlesex County.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Do you handle insurance claims for storm damage?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer"><div class="faq-answer-inner">Yes, we work directly with your insurance company to make the claims process as smooth as possible. Our team documents all damage, provides detailed estimates, and communicates with adjusters on your behalf so you can focus on your family.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How do I know if I need a roof replacement vs. repair?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer"><div class="faq-answer-inner">If your roof is over 20 years old, has widespread shingle damage, or you're seeing multiple leaks, a full replacement is usually more cost-effective. For isolated issues, a repair may suffice. We provide free inspections to give you an honest recommendation.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What warranties do you offer on roof replacements?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer"><div class="faq-answer-inner">We offer comprehensive warranties that cover both materials and workmanship. Depending on the product line you choose, manufacturer warranties can extend up to 50 years. We also provide our own workmanship guarantee for your peace of mind.</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== FINAL CTA ===== -->
     <section class="py-20 lg:py-24 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-r from-brand-red to-brand-red/90 gradient-animate"></div>
@@ -1379,7 +1591,7 @@
                     obligation.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#form-section"
+                    <a href="#hero-form"
                         class="inline-flex items-center justify-center gap-2 bg-white text-brand-red px-8 py-4 rounded-full font-bold text-lg uppercase tracking-wide hover:bg-gray-100 transition-all hover:scale-105 hover:shadow-xl">
                         <svg class="icon"><use href="#i-calendar-check"/></svg> Schedule FREE Estimate
                     </a>
@@ -1612,6 +1824,14 @@
 
             if (firstError) firstError.focus();
             return isValid;
+        }
+
+        // ===== FAQ ACCORDION =====
+        function toggleFaq(btn) {
+            var item = btn.parentElement;
+            var isActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(function(el) { el.classList.remove('active'); });
+            if (!isActive) item.classList.add('active');
         }
 
         function webLeadFormSubmit(event) {
