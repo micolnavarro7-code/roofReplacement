@@ -1,12 +1,12 @@
 export default async function handler(req, res) {
-    if (req.method \!== 'POST') {
+    if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
     try {
         const data = req.body;
 
-        if (\!data.FirstName || \!data.LastName || \!data.Phone) {
+        if (!data.FirstName || !data.LastName || !data.Phone) {
             return res.status(400).json({ error: 'Missing required fields' });
         }
 
@@ -31,12 +31,24 @@ export default async function handler(req, res) {
             }
         );
 
+        const responseText = await acculynxResponse.text();
+
+        if (!acculynxResponse.ok) {
+            console.error('AccuLynx error:', acculynxResponse.status, responseText);
+            return res.status(502).json({
+                error: 'AccuLynx rejected the lead',
+                status: acculynxResponse.status,
+                detail: responseText,
+            });
+        }
+
         return res.status(200).json({
             success: true,
             status: acculynxResponse.status,
             message: 'Lead submitted successfully',
         });
     } catch (error) {
-        return res.status(500).json({ error: 'Internal server error' });
+        console.error('API contact error:', error.message || error);
+        return res.status(500).json({ error: 'Internal server error', detail: error.message });
     }
 }
